@@ -191,7 +191,7 @@ function HeroSlider() {
         <div className="absolute inset-0 z-20 bg-gradient-to-b from-black/70 via-black/40 to-black/10" />
 
         {/* Білий градієнт тільки для другого слайду */}
-        {slides[i].whiteGradient && (
+        {(
           <div className="absolute inset-x-0 bottom-0 z-25 h-40 bg-gradient-to-t from-white/60 via-white/30 to-transparent pointer-events-none" />
         )}
 
@@ -223,15 +223,12 @@ function HeroSlider() {
         <div className="absolute bottom-8 right-8 z-40">
 <button
   onClick={() => alert(`Детальніше: ${slides[i].title}`)}
-  className={`cursor-pointer inline-flex items-center gap-3 rounded-2xl px-8 py-4 text-lg font-bold shadow-lg hover:scale-105 hover:shadow-2xl transition-all focus:outline-none focus:ring-4
-    ${
-      slides[i].darkButton
-        ? "border-2 border-zinc-900 text-zinc-900 bg-black/10 hover:bg-[#333] hover:text-white focus:ring-[#333]/50"
-        : "border-2 border-white text-white bg-white/10 hover:text-zinc-900 hover:bg-white/90 focus:ring-white/60"
-    }`}
+  className="cursor-pointer inline-flex items-center gap-3 rounded-2xl px-8 py-4 text-lg font-bold shadow-lg hover:scale-105 hover:shadow-2xl transition-all focus:outline-none focus:ring-4
+  border-2 border-white text-white bg-white/10 hover:text-zinc-900 hover:bg-white/90 focus:ring-white/60"
 >
   Детальніше
 </button>
+
 
 
 
